@@ -3717,8 +3717,7 @@
             {
                 static retornarMes(mes)
                 {
-                    const f=new Date();
-                    switch (f.getMonth()+1)
+                    switch (mes)
                     {
                         case 1:
                             return "Enero"
@@ -3756,6 +3755,9 @@
                         case 12:
                             return "diciembre"
                             break
+                        default:
+                            return "no ingreso un mes valido"
+                            break
                     }
                 }
                 static fechaCompleta()
@@ -3764,7 +3766,7 @@
                     return `${f.getDate()}-${f.getMonth()+1}-${f.getFullYear()}`;
                 }
             }
-            document.write(fecha.retornarMes()+"<br>");
+            document.write(fecha.retornarMes(5)+"<br>");
             document.write(fecha.fechaCompleta());
         </script>
     </body>
